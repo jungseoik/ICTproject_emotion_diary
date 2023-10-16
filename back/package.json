@@ -4,11 +4,15 @@
   "description": "ICT_풀스택개발자 과정 프로젝트 입니다. 오픈 ai api를 활용해 감정일기장을 만드는 프로젝트입니다.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.2",
+    "nodemon": "^3.0.1"
   }
 }
