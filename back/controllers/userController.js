@@ -3,11 +3,13 @@ const User = require('../models/User');
 exports.loginGetController = (req, res) => {
     const formHTML=`
     <form action="/login" method="POST">
-        <label for="userId">User ID:</label>
-        <input type="text" id="userId" name="userId">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        </br></br><button>Login</button></br></br> 
+        <ul>
+            <li><label for="userId">User ID:</label></li>
+            <li><input type="text" id="userId" name="userId"></li>
+            <li><label for="password">Password:</label></li>
+            <li><input type="password" id="password" name="password"></li>
+            <li></br></br><button>Login</button></br></br> </li>
+        </ul>
     </form>`
     res.send(formHTML);
 }
@@ -31,20 +33,27 @@ exports.loginPostController = async (req,res)=>{
 exports.signupGetController=(req,res)=>{
     const formHTML=`
     <form action="/login/signup" method="POST">
-        <label for="userId">User ID:</label>
-        <input type="text" id="userId" name="userId">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword">
-        <label for=name>Name:</label>
-        <input type=text id=name name=name>
-         <label for=phoneNumber>Phone Number:</label>
-         <input type=text id=phoneNumber name=phoneNumber>
-          <label for=email>Email:</label>
-          <input type=text id=email name=email> 
-         </br></br><button>Submit</button></br></br> 
-    </form>`
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId"><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+    
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br>
+    
+    <label for=name>Name:</label>
+    <input type=text id=name name=name><br>
+    
+     <label for=phoneNumber>Phone Number:</label>
+     <input type=text id=phoneNumber name=phoneNumber><br>
+     
+     <label for=email>Email:</label>
+     <input type=text id=email name=email><br> 
+     
+     </br></br><button>Submit</button></br></br> 
+</form>`
+
     res.send(formHTML);
 }
 
