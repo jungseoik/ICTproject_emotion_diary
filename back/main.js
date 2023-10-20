@@ -3,13 +3,13 @@ const express = require('express');
 const app = express();
 
 const mongoose = require('mongoose');
-const authRouter = require('./routes/api');
+const apiRouter = require('./routes/api');
 const pathRouter = require('./routes/path');
 
 
 
-const bodyParser=require("body-parser");
-app.use(bodyParser.urlencoded({extended:true}));
+// const bodyParser=require("body-parser");
+// app.use(bodyParser.urlencoded({extended:true}));
 
 
 const path = require('path'); //이미지 경로, 정적파일 저장 디렉토리 지정
@@ -24,11 +24,23 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 
-console.log("sssffffffffffffffff");
 
-app.use('/api',authRouter);
+app.use('/api', apiRouter);
 app.use('/', pathRouter);
 
+
+app.use(express.static(path.join(__dirname, 'tp')));
+app.get('/c', function(req, res){
+  res.sendFile(path.join(__dirname, 'tp', 'dairyWritePage.html'));
+});
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.get('/cr', function(req, res){
+  res.sendFile(path.join(__dirname, 'tp', 'Homepage.html'));
+});
+
+
+app.use('/create' , pathRouter);
 
 
 app.listen(3000);

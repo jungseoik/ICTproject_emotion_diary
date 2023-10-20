@@ -1,0 +1,8 @@
+const express = require("express");
+const router = express.Router();
+const imageController = require("../controllers/DalleController");
+
+// 이미지 생성 API 라우트 정의
+router.post("/create", imageController.createImage);
+
+module.exports = router;

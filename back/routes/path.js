@@ -120,5 +120,119 @@ router.get('/home',(req, res) => {
     res.send(Html);
 });
 
+router.get('/create',(req, res)=>{
+    res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>당신의 예술 작품을 만드세요!</title>
+      <style>
+        .container-fluid {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+        
+        .form {
+          text-align: center;
+        }
+        
+        h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        
+        input[type="text"] {
+          padding: 10px;
+          margin-right: 10px;
+        }
+        
+        .btn-primary {
+          padding: 10px 20px;
+          background-color:#007bff; 
+            color:#fff; 
+            border-radius:4px; 
+         }  
+         
+         .btn-primary:hover{
+            background-color:#0069d9; 
+            cursor:pointer; 
+         }  
+       </style>
+    </head>
+    
+    <body>
+    <div class="container-fluid">
+       <div class="form">
+         <h1>당신의 예술 작품을 만드세요!</h1>
+         <input type="text" id="promptInput" placeholder="이미지 설명을 입력하세요">
+         <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+    
+         <!-- 이미지 출력 영역 -->
+         <div id='imageContainer'></div>  
+       </div>
+    </div>
+    
+    <script>
+    document.getElementById("submitButton").addEventListener("click", function() {
+        var prompt = document.getElementById("promptInput").value;
+     
+        // 이미지 생성 API 호출
+        fetch('http://localhost:8080/create', {  
+            method:'POST',
+            headers:{
+              'Content-Type':'application/json'
+            },
+            body : JSON.stringify({
+                prompt : prompt
+            })
+            
+        })
+        .then(response => response.text())
+        .then(url => {
+     
+            // 결과 이미지 표시
+            let img = document.createElement('img');
+            img.src = url;
+     
+            let imageContainer = document.getElementById('imageContainer');
+            
+            // 기존에 있던 이미지 삭제 후 새로운 이미지 추가.
+            while(imageContainer.firstChild){
+                imageContainer.removeChild(imageContainer.firstChild);
+            }
+     
+             imageContainer.appendChild(img);
+             
+           
+            
+            
+            
+           
+            
+        
+        
+        
+        
+        
+        
+     
+     })
+     .catch(err => console.error(err));
+     
+     });
+     
+    
+    </script>
+    
+    </body>
+    
+    </html>
+    
+
+    `)
+});
+
 
 module.exports = router;
