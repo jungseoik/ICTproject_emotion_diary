@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
-const Diary = require('./models/Diary'); // Diary 모델의 경로를 적절하게 수정하세요.
+const Diary = require('./models/Diary'); // Diary 모델의 경로를 적절하게 수정
 
 const generateImageUrl= require('./dalle');
 
@@ -13,7 +13,7 @@ async function main() {
   const imageUrl = 'https://picsum.photos/200/300';
   // const imageUrl= await generateImageUrl(); 
 
-  const userId = 'user1'; // 실제 유저 ID로 교체하세요.
+  const userId = 'user1'; // 실제 유저 ID로 교체
   
   let diaryEntry = new Diary({
     userid: userId,
@@ -48,6 +48,9 @@ async function main() {
         await result.save();
 
         console.log(`Saved to DB successfully! ID is ${result._id}`);
+        // Add this line
+        mongoose.connection.close();
+        console.log('Mongoose connection disconnected');
         resolve();
       });
 
