@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">EMOTION <sup></sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                서비스
+            </div>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>달력보기</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-heart"></i>
+                    <span>일기쓰기</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    
+                    
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+                    <style>
+                    .navbar-brand {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 24px; /* 원하는 크기로 조절 */
+                    }
+                    </style>
+                    <a class="navbar-brand" href="#">Emotion Dairy</a>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-music"></i>
+                                <!-- Counter - Alerts -->
+                            </a>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-sun"></i>
+                            </a>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">사용자 1</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid" >
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Emotion Dairy</h1>
+
+                    </div>
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+
+                                    </div>
+                                    <table class="Calendar">
+                                        <thead>
+                                            <tr>
+                                                <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
+                                                <td colspan="5">
+                                                    <span id="calYear"></span>년
+                                                    <span id="calMonth"></span>월
+                                                </td>
+                                                <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>일</td>
+                                                <td>월</td>
+                                                <td>화</td>
+                                                <td>수</td>
+                                                <td>목</td>
+                                                <td>금</td>
+                                                <td>토</td>
+                                            </tr>
+                                        </thead>
+                            
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <hr>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+                    
+                    
+                            .Calendar {
+                                background-color : white;
+                                height: auto;
+                                width: 400px;
+                                margin: 0px;
+                                padding: 20px;
+                                margin: 0 auto;
+                                border-radius:5px;
+                                box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+                            }
+                    
+                            td {
+                                width: 50px;
+                                height: 50px;
+                            }
+                    
+                            .Calendar {
+                                text-align: center;
+                            }
+                    
+                            .Calendar>thead>tr:first-child>td {
+                                font-family: 'Questrial', sans-serif;
+                                font-size: 1.1em;
+                                font-weight: bold;
+                            }
+                    
+                            .Calendar>thead>tr:last-child>td {
+                                font-family: 'Questrial', sans-serif;
+                                font-weight: 600;     
+                            }
+                    
+                            .Calendar>tbody>tr>td>p {
+                                font-family: 'Montserrat', sans-serif;
+                                height: 45px;
+                                width: 45px;
+                                border-radius: 45px;
+                                transition-duration: .2s;
+                                line-height: 45px;
+                                margin: 2.5px;
+                                display: block;
+                                text-align: center;
+                            }        
+                    
+                            .pastDay {
+                                color: rgb(0, 0, 0);
+                            }
+                    
+                            .today {
+                                background-color: #F5D042;            
+                                color: #fff;
+                                font-weight: 600;
+                                cursor: pointer;
+                            }
+                    
+                            .futureDay {
+                                background-color: #FFFFFF;
+                                cursor: pointer;
+                            }
+                            .futureDay:hover{
+                                background:#eee;
+                            }
+                    
+                            .futureDay.choiceDay,
+                            .today.choiceDay {
+                                background: #0A174E;
+                                color: #fff;
+                                font-weight: 600;
+                                cursor: pointer;
+                            }
+                        </style>
+                    
+                        
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" id="diaryTitle"><h5 id="diaryDate"></h5></h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img id="diaryImage" class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="" alt="...">
+                                    </div>
+
+                                    <hr>
+
+                                    <p id="diaryContent"></p>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>ICTproject X Emotion Dairy Website 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script>
+        window.onload = function () { buildCalendar(); }    // 웹 페이지가 로드되면 buildCalendar 실행
+
+        let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
+        let today = new Date();     // 페이지를 로드한 날짜를 저장
+        today.setHours(0, 0, 0, 0);    // 비교 편의를 위해 today의 시간을 초기화
+
+        // 달력 생성 : 해당 달에 맞춰 테이블을 만들고, 날짜를 채워 넣는다.
+        function buildCalendar() {
+
+            let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);     // 이번달 1일
+            let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);  // 이번달 마지막날
+
+            let tbody_Calendar = document.querySelector(".Calendar > tbody");
+            document.getElementById("calYear").innerText = nowMonth.getFullYear();             // 연도 숫자 갱신
+            document.getElementById("calMonth").innerText = leftPad(nowMonth.getMonth() + 1);  // 월 숫자 갱신
+
+            while (tbody_Calendar.rows.length > 0) {                        // 이전 출력결과가 남아있는 경우 초기화
+                tbody_Calendar.deleteRow(tbody_Calendar.rows.length - 1);
+            }
+
+            let nowRow = tbody_Calendar.insertRow();        // 첫번째 행 추가           
+
+            for (let j = 0; j < firstDate.getDay(); j++) {  // 이번달 1일의 요일만큼
+                let nowColumn = nowRow.insertCell();        // 열 추가
+            }
+
+            for (let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {  
+                let nowColumn = nowRow.insertCell();        // 새 열을 추가하고
+
+
+                let newDIV = document.createElement("p");
+                newDIV.innerHTML = leftPad(nowDay.getDate());        // 추가한 열에 날짜 입력
+                nowColumn.appendChild(newDIV);
+
+                if (nowDay.getDay() == 6) {                 // 토요일인 경우
+                    nowRow = tbody_Calendar.insertRow();    // 새로운 행 추가
+                }
+
+                if (nowDay < today) {                       // 지난날인 경우
+                    newDIV.className = "pastDay";
+                }
+                if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()) { // 오늘인 경우           
+                    newDIV.className = "today";
+                    newDIV.onclick = function () { choiceDate(this); }
+                }
+                else {                                      // 미래인 경우
+                    newDIV.className = "futureDay";
+                    newDIV.onclick = function () { choiceDate(this); }
+                }
+
+                if (nowDay < today) {
+                    newDIV.className += " pastDay";  // 기존의 class에 pastDay 추가
+                }
+
+            }
+        }
+
+        // 날짜 선택
+        function choiceDate(newDIV) {
+            if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
+                document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
+            }
+            newDIV.classList.add("choiceDay");           // 선택된 날짜에 "choiceDay" class 추가
+        // 선택한 날짜 정보 가져오기
+        const selectedYear = nowMonth.getFullYear();
+        const selectedMonth = nowMonth.getMonth() + 1;
+        const selectedDate = newDIV.innerHTML;
+        
+        const selectedUTCDate = new Date(Date.UTC(selectedYear, selectedMonth - 1, selectedDate));
+
+        // 서버에 GET 요청 보내기
+        fetch(`/api/diaryCalendar?year=${selectedYear}&month=${selectedMonth}&date=${selectedDate}`)
+        .then(response => response.json())
+        .then(data => {
+            // 서버 응답 처리 로직 작성
+            console.log("아 데이터 받았다",data); // 예시: 응답 데이터 출력
+            // 여기서 필요한 추가 동작 및 로직
+            const imageElement = document.getElementById('diaryImage');
+            const titleElement = document.getElementById('diaryTitle');
+            const contentElement = document.getElementById('diaryContent');
+            const dateElement = document.getElementById('diaryDate');
+            // 이미지 URL 설정
+            imageElement.src = data.imageUrl;
+
+            // 제목과 내용 설정
+            titleElement.innerText = data.title;
+            contentElement.innerText = data.content;
+            // 저장된 날짜 표시 (예: "2023년 10월 20일")
+            const savedDate = new Date(data.createdAt);
+            const formattedDate = `${savedDate.getFullYear()}년 ${savedDate.getMonth() + 1}월 ${savedDate.getDate()}일`;
+            
+            dateElement.innerText = formattedDate;  
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // 에러 처리 로직 작성
+        });
+        
+        }
+
+        // 이전달 버튼 클릭
+        function prevCalendar() {
+            nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
+            buildCalendar();    // 달력 다시 생성
+        }
+        // 다음달 버튼 클릭
+        function nextCalendar() {
+            nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());   // 현재 달을 1 증가
+            buildCalendar();    // 달력 다시 생성
+        }
+
+        // input값이 한자리 숫자인 경우 앞에 '0' 붙혀주는 함수
+        function leftPad(value) {
+            if (value < 10) {
+                value = "0" + value;
+                return value;
+            }
+            return value;
+        }
+    </script>
+
+
+</body>
+
+</html>

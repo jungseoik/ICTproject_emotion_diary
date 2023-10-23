@@ -248,28 +248,32 @@
 
                                         diaries.forEach((diary, index) => {
                                             if (index % 3 === 0) { // 새로운 row 생성
-                                            const newRow = document.createElement('div');
-                                            newRow.className = 'row justify-content-center';
-                                            mainSection.appendChild(newRow);
+                                                const newRow = document.createElement('div');
+                                                newRow.className = 'row justify-content-center';
+                                                mainSection.appendChild(newRow);
                                             }
 
                                             const lastRow = mainSection.lastChild;
 
-                                            
                                             // 새로운 이미지 엘리먼트 생성 및 속성 설정
                                             const newImageElement = document.createElement('a');
-                                            newImageElement.className = 'col-md-3 d-flex justify-content-center my-3';
+
+                                            // Set href to the detail page with the image URL as a query parameter
+                                            newImageElement.href = `/diaryInquirePage?imageUrl=${encodeURIComponent(diary.imageUrl)}`;
                                             
+                                            newImageElement.className = 'col-md-3 d-flex justify-content-center my-3';
+
                                             const newImage = document.createElement('img');
                                             newImage.src = diary.imageUrl;
                                             newImage.alt = 'Sample Image';
                                             newImage.className = 'img-fluid square';
+
                                             newImageElement.appendChild(newImage);
 
                                             // 마지막 row에 이미지 추가
                                             lastRow.appendChild(newImageElement);
-                                            
                                         });
+
                                         }
                                         </script>
 
@@ -280,37 +284,37 @@
                                             <section class='thumbnails d-flex justify-content-center flex-wrap'>
                                                 <!-- row 1-->
                                                 <div class='row justify-content-center'>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'>  
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'>  
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'> 
-                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
-                                                    </a>
-                                                    
-                                                </div>
-                                                <div class='row justify-content-center'>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'> 
-                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
-                                                    </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'> 
-                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
-                                                    </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'> 
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'> 
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
                                                     
                                                 </div>
                                                 <div class='row justify-content-center'>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'> 
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'> 
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
-                                                    <a href="#" class='col-md-3 d-flex justify-content-center my-3'> 
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'> 
+                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
+                                                    </a>
+                                                    
+                                                </div>
+                                                <div class='row justify-content-center'>
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
+                                                    </a>
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'>  
+                                                        <img src='' alt='Sample Image'  class='img-fluid square'/>
+                                                    </a>
+                                                    <a href="/diaryInquirePage" class='col-md-3 d-flex justify-content-center my-3'> 
                                                         <img src='' alt='Sample Image'  class='img-fluid square'/>
                                                     </a>
                                                     

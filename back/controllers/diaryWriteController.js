@@ -25,8 +25,8 @@ exports.createDiary = async (req, res) => {
       title: diaryData.title,
       content: diaryData.content,
       createdAt: Date.now(),
-      imageUrl : "", // 이미지 URL은 별도로 업데이트해야 할 것으로 보입니다.
-      emotionAnalysis : { // 감정 분석 결과는 별도로 업데이트해야 할 것으로 보입니다.
+      imageUrl : "", // 이미지 URL은 별도로 업데이트해야 할 것
+      emotionAnalysis : { // 감정 분석 결과는 별도로 업데이트해야 할 것
         joy: 1,
         sadness: 1,
         anger:0,

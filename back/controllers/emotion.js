@@ -9,8 +9,8 @@ async function analyzeSentiment(text) {
       content: contentToAnalyze,
     }, {
       headers: {
-        'X-NCP-APIGW-API-KEY-ID': 'm5kp06mxt3',
-        'X-NCP-APIGW-API-KEY': 'XFcn337IlO9HCu45OTpMGBmZmM7bQ3gioP1jj4Qh',
+        'X-NCP-APIGW-API-KEY-ID': '키값',
+        'X-NCP-APIGW-API-KEY': '키값',
         'Content-Type': 'application/json'
       }
     });
@@ -30,7 +30,7 @@ async function analyzeSentiment(text) {
   }
 }
 module.exports = analyzeSentiment;
-//이게 함수 자체를 내보내는것과 promise객체를 내보내는게 차이가 난다.
+//이게 함수 자체를 내보내는것과 promise객체를 내보내는게 차이가 난다
 // module.exports = analyzeSentiment();
 // module.exports = analyzeSentiment;
 //이 두가지 방식은 차이가 존재

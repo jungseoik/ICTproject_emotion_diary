@@ -10,7 +10,7 @@ const generateImageUrl= require('./dalle');
 mongoose.connect('mongodb+srv://jungseoik:vxtC2QAllOvTi4B0@cluster0.jyjok.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
 async function main() {
-  const imageUrl = 'https://picsum.photos/200/300';
+  const imageUrl = 'https://www.urbanbrush.net/web/wp-content/uploads/edd/2023/06/urban-20230613083156911235.jpg';
   // const imageUrl= await generateImageUrl(); 
 
   const userId = 'user1'; // 실제 유저 ID로 교체

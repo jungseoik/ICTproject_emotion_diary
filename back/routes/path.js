@@ -1,12 +1,25 @@
 const express = require('express');
 const router = express.Router();
 
+
+
 router.get('/',(req,res)=>{
     res.send(`
     <a href = "/login"> 로그인페이지로 </a>
     <h2>///</h2>
     <a href = "/signup">회원가입 </a>
         `);
+});
+
+router.get('/registerPage', (req,res)=>{
+  res.render('registerPage');
+});
+
+router.get('/loginPage', (req,res)=>{
+  res.render('loginPage');
+});
+router.get('/diaryCalender', (req,res)=>{
+  res.render('diaryCalender');
 });
 
 router.get('/login', (req,res)=>{
