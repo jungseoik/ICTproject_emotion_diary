@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/userModel');
 
 exports.loginGetController = (req, res) => {
     const formHTML=`
@@ -53,6 +53,7 @@ exports.signupGetController=(req,res)=>{
      
      </br></br><button>Submit</button></br></br> 
 </form>`
+
 
     res.send(formHTML);
 }
