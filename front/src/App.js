@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useRef, useState, useCallback, useReducer } from "react";
+import React, { useMemo, useRef, useCallback, useReducer, useEffect } from "react";
 import DiaryEditor from './component/page/DiaryEditor';
 import DiaryList from './component/list/DiaryList';
 import "./style/Diary.css";
@@ -33,28 +33,46 @@ const reducer = (state, action) => {
   }
 };
 
-function App() {
-
+const App = () => {
   const [data, dispatch] = useReducer(reducer, []);
   const dataId = useRef(0);
 
-  const getData = async () => {
-    const res = await fetch("https://jsonplaceholder.typicode.com/comments")
-      .then((res) => res.json());
+  const getData = async (data) => {
+    try {
+      const res = await fetch("/diaryWrite", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    const initData = res.slice(0, 20).map((it) => {
-      return {
-        author: it.email,
-        content: it.body,
-        emotion: Math.floor(Math.random() * 5) + 1,
-        created_date: new Date().getTime(),
-        id: dataId.current++
+      if (!res.ok) {
+        throw new Error(`서버 응답 실패: ${res.status}`);
       }
-    });
 
-    dispatch({ type: "INIT", data: initData });
+      const result = await res.json();
+      console.log("서버 응답:", result);
+
+      const initData = result.slice(0, 20).map((it) => {
+        return {
+          author: it.email,
+          content: it.body,
+          emotion: Math.floor(Math.random() * 5) + 1,
+          created_date: new Date().getTime(),
+          id: dataId.current++
+        }
+      });
+
+      dispatch({ type: "INIT", data: initData });
+    } catch (error) {
+      console.error("데이터 가져오기 오류:", error);
+    }
   };
 
+  useEffect(() => {
+    getData(); // 컴포넌트가 마운트될 때 데이터를 가져옴
+  }, []); // 빈 배열을 넣어 한 번만 호출되도록 함
 
   const onCreate = useCallback(
     (author, content, emotion) => {
