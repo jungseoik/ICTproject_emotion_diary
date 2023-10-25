@@ -23,8 +23,8 @@ exports.getDiaries = async (req, res) => {
           emotionAnalysis : {
             joy :diary.emotionAnalysis.joy , 
             sadness :diary.emotionAnalysis.sadness , 
-            anger :diary.emotionAnalysis.anger , 
-            disgust :diary.emotionAnalysis.disgust
+            anger :diary.emotionAnalysis.anger ,
+            // disgust :diary.emotionAnalysis.disgust
            }
         }))
       });

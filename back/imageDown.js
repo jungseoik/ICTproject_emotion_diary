@@ -9,7 +9,7 @@ const generateImageUrl= require('./dalle');
 // MongoDB 연결 설정
 mongoose.connect('mongodb+srv://jungseoik:vxtC2QAllOvTi4B0@cluster0.jyjok.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 
-async function main() {
+async function main(Title, Content) {
   const imageUrl = 'https://www.urbanbrush.net/web/wp-content/uploads/edd/2023/06/urban-20230613083156911235.jpg';
   // const imageUrl= await generateImageUrl(); 
 
@@ -17,11 +17,11 @@ async function main() {
   
   let diaryEntry = new Diary({
     userid: userId,
-    title: 'Diary Title',
-    content: 'Diary Content',
+    title: Title,
+    content: Content,
     emotionAnalysis : {    
-      joy:0.5,
-      sadness:0.2,
+      joy:70,
+      sadness:20,
       anger:0.1,
       disgust:0.2
     }
@@ -51,7 +51,7 @@ async function main() {
         // Add this line
         mongoose.connection.close();
         console.log('Mongoose connection disconnected');
-        resolve();
+        resolve(diaryEntry);
       });
 
       fileStream.on('error', (err) => {
@@ -69,4 +69,4 @@ async function main() {
  }
 }
 
-main();
+module.exports = main;

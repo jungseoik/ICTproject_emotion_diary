@@ -47,7 +47,6 @@ app.get('/HomePage', function(req, res){
 
 
 
-
 const Diary = mongoose.model('Diary');  // Assuming you have a Diary model
 
 app.get('/diaryInquirePage', async function(req, res){
@@ -71,7 +70,8 @@ app.get('/diaryInquirePage', async function(req, res){
 
 
 
-app.use('/create' , pathRouter);
+// app.use('/create' , pathRouter);
+// 다른 템플릿 예시 없어도 됨
 
 
 app.listen(3000);
