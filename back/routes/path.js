@@ -22,6 +22,10 @@ router.get('/diaryCalendarPage', (req,res)=>{
   res.render('diaryCalendarPage');
 });
 
+
+
+
+
 router.get('/login', (req,res)=>{
     const formHTML=`
     <form action="/api/auth/login" method="POST">

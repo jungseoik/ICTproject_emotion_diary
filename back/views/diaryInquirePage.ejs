@@ -233,10 +233,23 @@
                                         <div class="progress-bar" role="progressbar" style="width: <%= diary.emotionAnalysis.anger %>%"
                                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                            
+                                    <button id="deleteButton" class="btn btn-danger btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                        </span>
+                                        <span class="text">일기 삭제</span>
+                                    </button>
+                                    <button id="modifyButton" class="btn btn-success btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span class="text">일기 수정</span>
+                                    </button>
+
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -296,10 +309,32 @@
     <!-- Page level plugins -->
     <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <script>
+        const idToUpdate = 'jsi6452'; // 원하는 ID 값
+    
+        // 수정 버튼을 클릭했을 때 실행될 함수
+        document.getElementById('modifyButton').addEventListener('click', () => {
+            axios.put(`/api/${idToUpdate}`, { id: idToUpdate })
+                .then(response => {
+                    console.log('PUT 요청 성공');
+                })
+                .catch(error => {
+                    console.error('PUT 요청 실패', error);
+                });
+        });
+        document.getElementById('deleteButton').addEventListener('click', () => {
+            axios.delete(`/api/${idToUpdate}`, { id: idToUpdate })
+                .then(response => {
+                    console.log('delete 요청 성공');
+                })
+                .catch(error => {
+                    console.error('delete 요청 실패', error);
+                });
+        });
+    </script>
+    
 </body>
 
 </html>
