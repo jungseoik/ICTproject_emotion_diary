@@ -1,5 +1,5 @@
-# ICTproject_emotion_diary
-ICT_풀스택개발자 과정 프로젝트 입니다. 오픈 ai api를 활용해 감정일기장을 만드는 프로젝트입니다.
+# ICT_project_emotion_diary
+오픈 ai api를 활용해 감정일기장을 만드는 프로젝트입니다.
 - EX)
 
 - ![001](https://github.com/jungseoik/ICTproject_emotion_diary/assets/92513469/9b1b7dad-b833-4cf4-9e3d-ac228374b360)
